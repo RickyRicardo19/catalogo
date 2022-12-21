@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "usuarios Usuario"
 
 # Application definition
 
@@ -76,8 +77,15 @@ WSGI_APPLICATION = 'catalogo1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'Proyecto_catalogo',
+        'USER': 'Rickytac32',
+        'PASSWORD': 'rickytac32',
+        'HOST': 'DESKTOP-T6PBGPS\SQLEXPRESS',
+        'PORT': '5432',
+        'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server', }
+
+
     }
 }
 
