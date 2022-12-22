@@ -16,6 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+<<<<<<< HEAD
 urlpatterns = [
     path('admin/', admin.site.urls),
+=======
+from . import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.inicio)
+>>>>>>> 8741b25dfdd5b064145bcc6c479f9da9718572fc
 ]
